@@ -19,7 +19,10 @@ namespace APITestAssignment.StepDefinitions
     public class APITestStepDefinitions3
     {
         private readonly SingleUser user;
-        private const string BASE_URL = "https://reqres.in/";
+        static string jsonFilePath = "C:\\Users\\hp\\source\\repos\\APITestAssignment\\specflow.json";
+        static string file = File.ReadAllText(jsonFilePath);
+        static dynamic testData = JsonConvert.DeserializeObject<dynamic>(file);
+        static string BASE_URL = testData.url;
         APIResponseTest api = new APIResponseTest();
         public RestResponse response;
         public APITestStepDefinitions3(SingleUser user)

@@ -7,13 +7,19 @@ using NUnit.Framework;
 using RestSharp;
 using System.Configuration;
 using TechTalk.SpecFlow;
+using System.Security.Policy;
+using Newtonsoft.Json;
 
 namespace APITestAssignment.StepDefinitions
 {
     [Binding]
     public class APITestStepDefinitions1
     {
-        private const string BASE_URL = "https://reqres.in/";
+        //private const string BASE_URL = "https://reqres.in/";
+        static string jsonFilePath = "C:\\Users\\hp\\source\\repos\\APITestAssignment\\specflow.json";
+        static string file = File.ReadAllText(jsonFilePath);
+        static dynamic testData = JsonConvert.DeserializeObject<dynamic>(file);
+        static string BASE_URL = testData.url;
         APIResponseTest api = new APIResponseTest();
         private readonly CreateUserRequest createUserRequest;
         private RestResponse response;
@@ -28,6 +34,7 @@ namespace APITestAssignment.StepDefinitions
         [Given(@"Input name ""(.*)""")]
         public void GivenInputName(string name)
         {
+            
             createUserRequest.name = name;
         }
 

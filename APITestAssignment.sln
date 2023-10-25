@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APITestAssignment", "APITestAssignment.csproj", "{C1EC8E38-B440-418D-A5A6-5247612167B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APITestAssignment", "APITestAssignment.csproj", "{C1EC8E38-B440-418D-A5A6-5247612167B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{41A7C10C-FBBE-4340-AE31-BA51DBF3F08B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
